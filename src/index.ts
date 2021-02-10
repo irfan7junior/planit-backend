@@ -50,7 +50,7 @@ const main = async () => {
       cookie: {
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
         secure: __prod__,
-        sameSite: 'lax',
+        sameSite: 'none',
         domain: process.env.FRONT_END,
       },
       store: sessionStore,
