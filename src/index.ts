@@ -49,7 +49,7 @@ const main = async () => {
       name: process.env.COOKIE_NAME,
       cookie: {
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
-        secure: false,
+        secure: true,
         sameSite: 'none',
         // domain: process.env.FRONT_END,
       },
