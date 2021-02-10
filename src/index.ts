@@ -53,7 +53,7 @@ const main = async () => {
         httpOnly: false,
         // secure: true,
         // sameSite: 'none',
-        domain: '.irfan7junior.in',
+        domain: 'planit.irfan7junior.in',
       },
       store: sessionStore,
     })
