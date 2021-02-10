@@ -51,6 +51,7 @@ const main = async () => {
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
         secure: __prod__,
         sameSite: 'lax',
+        domain: process.env.FRONT_END,
       },
       store: sessionStore,
     })
