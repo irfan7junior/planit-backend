@@ -51,7 +51,7 @@ const main = async () => {
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
         path: '/',
         secure: true,
-        sameSite: 'none',
+        sameSite: 'lax',
       },
       store: sessionStore,
     })
