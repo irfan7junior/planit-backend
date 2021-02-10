@@ -50,10 +50,8 @@ const main = async () => {
       cookie: {
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
         path: '/',
-        httpOnly: false,
-        // secure: true,
-        // sameSite: 'none',
-        domain: 'https://planit.irfan7junior.in',
+        secure: true,
+        sameSite: 'strict',
       },
       store: sessionStore,
     })
