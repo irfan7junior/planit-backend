@@ -20,16 +20,16 @@ export class User {
   @prop({ unique: true })
   public githubId!: string
 
-  @prop({ required: true })
+  @prop({ required: false })
   displayName!: string
 
   @prop({ required: true })
   accessToken!: string
 
-  @prop({ required: true })
+  @prop({ required: false })
   profileUrl!: string
 
-  @prop({ required: true, type: Schema.Types.Array })
+  @prop({ required: false, type: Schema.Types.Array })
   photos!: { value: string }[]
 
   @prop({ ref: 'Project' })
