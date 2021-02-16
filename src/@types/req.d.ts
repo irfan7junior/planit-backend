@@ -6,7 +6,8 @@ declare namespace Express {
       username: string
       profileUrl: string
       photos: Record<string, string>[]
-      new: string
+      _id: string
+      projects: string[]
     }
   }
 }

@@ -1,10 +1,24 @@
-import { getModelForClass, prop, Ref } from '@typegoose/typegoose'
+import { getModelForClass, prop, pre, Ref } from '@typegoose/typegoose'
 import { Schema } from 'mongoose'
-import { Project } from './Project'
+import { Project, ProjectModel } from './Project'
+import { modelOptions, Severity } from '@typegoose/typegoose'
 
+@modelOptions({
+  options: {
+    allowMixed: Severity.ALLOW,
+  },
+})
+@pre<User>('remove', async function (next) {
+  ProjectModel.collection.deleteMany({
+    _id: {
+      $in: this.projects,
+    },
+  })
+  next()
+})
 export class User {
   @prop({ unique: true })
-  githubId!: string
+  public githubId!: string
 
   @prop({ required: true })
   displayName!: string

@@ -48,9 +48,10 @@ const main = async () => {
       saveUninitialized: true,
       name: process.env.COOKIE_NAME,
       cookie: {
+        path: '/',
         maxAge: 1000 * 60 * 60 * 24, // expiration time is one day
         httpOnly: true,
-        secure: true,
+        secure: __prod__ ? true : false,
         sameSite: 'none',
       },
       store: sessionStore,

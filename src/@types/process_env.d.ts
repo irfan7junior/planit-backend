@@ -8,6 +8,7 @@ declare namespace NodeJS {
     FRONT_END: string
     NODE_ENV: string
     COOKIE_NAME: string
+    DB_NAME: string
     [key: string]: string
   }
 }
