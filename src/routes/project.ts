@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import { Project, ProjectModel } from '../entities/Project'
-import { Todo, TodoModel } from '../entities/Todo'
-import { User, UserModel } from '../entities/User'
+import { UserModel } from '../entities/User'
 
 const router = Router()
 
